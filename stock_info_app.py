@@ -10,8 +10,6 @@ from matplotlib import rc
 from io import BytesIO
 import matplotlib.font_manager as fm
 
-fm._load_fontmanager(try_read_cache=False)
-
 #----------------------------------------
 # 한국 주식 종목 코드를 가져오는 함수
 #----------------------------------------
@@ -89,7 +87,7 @@ if(clicked == True):
     
     # 2) 차트 그리기
     # matplotlib을 이용한 그래프에 한글을 표시하기 위한 설정
-    fontprop = fm.FontProperties(fname='NanumGothic.ttf', size=18)
+    fontprop = fm.FontProperties(fname='./NanumGothic.ttf', size=18)
     matplotlib.rcParams['axes.unicode_minus'] = False
 
     # 선 그래프 그리기
